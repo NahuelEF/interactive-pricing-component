@@ -3,29 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
 
     <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
+      rel="shortcut icon"
       href="./images/favicon-32x32.png"
+      type="image/png"
     />
 
     <title>Nahuel Fedele | Interactive pricing component</title>
   </head>
   <body>
     <main class="main">
-      <div>
-        <h1 class="title">Simple, traffic-based pricing</h1>
-        <p>Sign-up for our 30-day trial. No credit card required.</p>
+      <div class="header">
+        <h1 class="header__title">Simple, traffic-based pricing</h1>
+        <p class="header__subtitle">
+          Sign-up for our 30-day trial. No credit card required.
+        </p>
       </div>
 
       <section class="section">
-        <p>100k Pageviews</p>
-        <label for="price"> $ <span> 16.00 </span> /month </label>
-        <input type="range" name="price" id="price" />
+        <div class="top">
+          <p class="top__pageviews">
+            <span id="pageview">100k</span> Pageviews
+          </p>
+          <label class="top__price" for="range">
+            <span id="price">$16.00 </span> / month
+          </label>
+        </div>
+        <input id="range" type="range" name="price" min="1" max="5" value="3" />
 
-        <div>
+        <div class="center">
           <label for="switch"> Monthly Billing </label>
           <div class="switch">
             <input type="checkbox" name="switch" id="switch" />
@@ -33,22 +49,22 @@
           </div>
           <label for="switch">
             Yearly Billing
-            <span> 25% discount </span>
+            <span class="label__discount"> 25% discount </span>
           </label>
         </div>
 
-        <div>
+        <div class="bottom">
           <ul>
             <li>Unlimited websites</li>
             <li>100% data ownership</li>
             <li>Email reports</li>
           </ul>
-          <button type="button">Start my trial</button>
+          <button class="bottom__button" type="button">Start my trial</button>
         </div>
       </section>
     </main>
 
-    <footer class="attribution">
+    <footer class="footer">
       Challenge by
       <a
         href="https://www.frontendmentor.io?ref=challenge"
