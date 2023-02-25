@@ -32,14 +32,22 @@
 
       <section class="section">
         <div class="top">
-          <p class="top__pageviews">
+          <label class="top__pageviews" for="range">
             <span id="pageview">100k</span> Pageviews
-          </p>
+          </label>
           <label class="top__price" for="range">
             <span id="price">$16.00 </span> / month
           </label>
         </div>
-        <input id="range" type="range" name="price" min="1" max="5" value="3" />
+        <input
+          id="range"
+          type="range"
+          name="price"
+          min="1"
+          max="5"
+          value="3"
+          step="0.1"
+        />
 
         <div class="center">
           <span class="center__label"> Monthly Billing </span>
