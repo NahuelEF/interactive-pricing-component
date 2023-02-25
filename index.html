@@ -42,15 +42,17 @@
         <input id="range" type="range" name="price" min="1" max="5" value="3" />
 
         <div class="center">
-          <label for="switch"> Monthly Billing </label>
-          <div class="switch">
-            <input type="checkbox" name="switch" id="switch" />
-            <span class="slider round"></span>
-          </div>
-          <label for="switch">
-            Yearly Billing
-            <span class="label__discount"> 25% discount </span>
+          <span class="center__label"> Monthly Billing </span>
+
+          <label class="switch" for="discount">
+            <input type="checkbox" name="discount" id="discount" />
+            <span class="slider__switch"></span>
           </label>
+
+          <p class="center__label">
+            Yearly Billing
+            <span class="center__discount"> 25% discount </span>
+          </p>
         </div>
 
         <div class="bottom">
