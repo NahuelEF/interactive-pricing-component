@@ -83,10 +83,9 @@ body::before {
 
 .header::before {
   content: url(./images/pattern-circles.svg);
-  position: fixed;
+  width: 100%;
+  position: absolute;
   z-index: -1;
-  left: 0;
-  right: 1px;
 }
 
 .header__title {
@@ -99,7 +98,6 @@ body::before {
 }
 
 .section {
-  position: relative;
   width: 545px;
   margin: 2em 0;
   border-radius: 0.5em;
@@ -306,8 +304,14 @@ body::before {
 }
 
 /* ----------------------- */
-
+/* ---- FOOTER ---- */
 .footer {
-  display: none;
   margin: 2em;
+  color: var(--dark-desaturated-blue);
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.footer__link {
+  color: var(--bg-strong-cyan-slider);
 }
