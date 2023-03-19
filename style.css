@@ -14,7 +14,7 @@
   --color-grayish-blue: hsl(225, 20%, 60%);
   --dark-desaturated-blue: hsl(227, 35%, 25%);
 
-  --padding-container: 2.5em;
+  --padding-container: 3.2em;
   --font-size-span: 0.87em;
 }
 
@@ -59,7 +59,6 @@ body::before {
 }
 
 .main {
-  margin: 2em;
   color: var(--color-grayish-blue);
 
   display: flex;
@@ -71,7 +70,7 @@ body::before {
 .header {
   position: relative;
   width: 100%;
-  margin-bottom: 2em;
+  margin: 2em 0;
 
   text-align: center;
 
@@ -97,16 +96,25 @@ body::before {
   color: inherit;
 }
 
+.header__subtitle br {
+  display: none;
+}
+
 .section {
   width: 545px;
-  margin: 2em 0;
+  margin: 2em;
   border-radius: 0.5em;
   background-color: var(--bg-white);
   box-shadow: -1px 10px 40px -10px var(--color-grayish-blue);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* ---- CONTAINER ONE ---- */
 .container-one {
+  width: 100%;
   padding: var(--padding-container);
   display: flex;
   flex-direction: column;
@@ -179,6 +187,7 @@ body::before {
 
 /* ---- CENTER ---- */
 .center {
+  position: relative;
   width: 100%;
 
   display: flex;
@@ -189,6 +198,7 @@ body::before {
 
 .center__label {
   font-size: var(--font-size-span);
+  text-align: center;
 }
 
 .switch {
@@ -245,8 +255,9 @@ body::before {
 }
 
 .center__discount {
+  position: absolute;
   margin-left: 0.5em;
-  padding: 0.5em;
+  padding: 1em;
   border-radius: 2em;
   background-color: var(--bg-light-grayish-red-discount);
   color: var(--color-light-red-discount);
@@ -255,6 +266,10 @@ body::before {
   letter-spacing: 0;
   text-align: center;
   font-size: 0.8em;
+}
+
+.center__discount--mobile {
+  display: none;
 }
 /* ----------------------- */
 /* ---- CONTAINER TWO ---- */
@@ -283,7 +298,7 @@ body::before {
 }
 
 .bottom__button {
-  width: 40%;
+  width: 170px;
   padding: 1em;
   border: none;
   border-radius: 2em;
@@ -308,10 +323,55 @@ body::before {
 .footer {
   margin: 2em;
   color: var(--dark-desaturated-blue);
+  text-align: center;
   font-size: 1em;
   font-weight: 600;
 }
 
 .footer__link {
   color: var(--bg-strong-cyan-slider);
+}
+
+@media screen and (max-width: 540px) {
+  body {
+    justify-content: start;
+    overflow-x: hidden;
+  }
+  /* 
+  .main {
+    width: 100%;
+  } */
+
+  .header__title {
+    font-size: 1.7em;
+  }
+
+  .header__subtitle br {
+    display: inline;
+  }
+
+  .section {
+    width: 100%;
+  }
+
+  .container-two {
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .top {
+    flex-direction: column;
+  }
+
+  .center__discount {
+    display: none;
+  }
+
+  .center__discount--mobile {
+    display: inline;
+  }
+
+  .list {
+    align-items: center;
+  }
 }
