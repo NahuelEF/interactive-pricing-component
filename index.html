@@ -31,35 +31,44 @@
       </div>
 
       <section class="section">
-        <div class="top">
-          <label class="top__pageviews" for="range">
-            <span id="pageview">10k</span> Pageviews
-          </label>
-          <label class="top__price" for="range">
-            <span id="price">$8.00 </span> / month
-          </label>
+        <div class="container-one">
+          <div class="top">
+            <label class="top__pageviews" for="range">
+              <span id="pageview">10k</span> Pageviews
+            </label>
+            <label class="top__price" for="range">
+              <span id="price">$8.00 </span> / month
+            </label>
+          </div>
+          <input
+            id="range"
+            type="range"
+            name="price"
+            min="0"
+            max="4"
+            value="0"
+          />
+
+          <div class="center">
+            <span class="center__label"> Monthly Billing </span>
+
+            <label class="switch" for="discount">
+              <input type="checkbox" name="discount" id="discount" />
+              <span class="slider__switch"></span>
+            </label>
+
+            <p class="center__label">
+              Yearly Billing
+              <span class="center__discount"> 25% discount </span>
+            </p>
+          </div>
         </div>
-        <input id="range" type="range" name="price" min="0" max="4" value="0" />
 
-        <div class="center">
-          <span class="center__label"> Monthly Billing </span>
-
-          <label class="switch" for="discount">
-            <input type="checkbox" name="discount" id="discount" />
-            <span class="slider__switch"></span>
-          </label>
-
-          <p class="center__label">
-            Yearly Billing
-            <span class="center__discount"> 25% discount </span>
-          </p>
-        </div>
-
-        <div class="bottom">
-          <ul>
-            <li>Unlimited websites</li>
-            <li>100% data ownership</li>
-            <li>Email reports</li>
+        <div class="container-two">
+          <ul class="list">
+            <li class="list__item">Unlimited websites</li>
+            <li class="list__item">100% data ownership</li>
+            <li class="list__item">Email reports</li>
           </ul>
           <button class="bottom__button" type="button">Start my trial</button>
         </div>
