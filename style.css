@@ -176,9 +176,13 @@ body::before {
 
 #range::-webkit-slider-thumb:hover {
   background-color: hsl(174, 73%, 70%);
+  cursor: pointer;
 }
+
 #range::-webkit-slider-thumb:active {
   background-color: hsl(176, 64%, 41%);
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
 }
 
 #range::-moz-range-progress {
@@ -337,10 +341,6 @@ body::before {
     justify-content: start;
     overflow-x: hidden;
   }
-  /* 
-  .main {
-    width: 100%;
-  } */
 
   .header__title {
     font-size: 1.7em;
